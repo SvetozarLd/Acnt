@@ -1,0 +1,895 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.WinForms.75.1.142\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.75.1.142\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.75.1.142\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.75.1.142\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.75.1.14\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.75.1.14\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.75.1.14\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.75.1.14\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9389279-53FA-4B81-AA2A-43062910AFBB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccentBase</RootNamespace>
+    <AssemblyName>AccentBase</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <InstallUrl>http://109.68.172.70/accentbase/</InstallUrl>
+    <UpdateUrl>http://109.68.172.70/accentbase/</UpdateUrl>
+    <ProductName>AccentBase</ProductName>
+    <PublisherName>Svetozar</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.htm</WebPage>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>21</ApplicationRevision>
+    <ApplicationVersion>2.1.5.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>D:\00000000000</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AccentBase.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C6FA834498291394A7338C06932631A4327CD8B9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AccentBase_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>\\EPSON_30610\Repos\AccentBase2\AccentBase\AccentBase\bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon_print.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoClosingMessageBox, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoClosingMessageBox.1.0.0.2\lib\net40\AutoClosingMessageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.5\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.13.4.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.13.4\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentFTP, Version=27.1.1.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentFTP.27.1.1\lib\net45\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="Ghostscript.NET, Version=1.2.1.0, Culture=neutral, PublicKeyToken=f85051de34525b59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ghostscript.NET.1.2.1\lib\net40\Ghostscript.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextSharp.LGPLv2.Core.Fix, Version=1.4.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.LGPLv2.Core.Fix.1.4.3\lib\net40\iTextSharp.LGPLv2.Core.Fix.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Sensors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.Sensors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework">
+      <HintPath>..\packages\PresentationFramework.4.6.0\lib\PresentationFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.4.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.4.0\lib\net40\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.111.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.111.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.111.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TXDocumentServer, Version=24.0.1000.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638" />
+    <Reference Include="TXDocumentServer.Windows.Forms, Version=24.0.700.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638" />
+    <Reference Include="TXDrawing, Version=24.0.200.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638" />
+    <Reference Include="TXDrawing.Windows.Forms, Version=24.0.200.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638" />
+    <Reference Include="TXTextControl, Version=24.0.1700.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638" />
+    <Reference Include="TXTextControl.Server, Version=24.0.900.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL" />
+    <Reference Include="TXTextControl.Windows.Forms, Version=24.0.900.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL" />
+    <Reference Include="txtools, Version=24.0.700.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\00000000000\txtix\txtools.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomControls\CustomFilesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomFilesControl.Designer.cs">
+      <DependentUpon>CustomFilesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CustomPreviewFolder\CustomPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomPreviewFolder\CustomPreview.Designer.cs">
+      <DependentUpon>CustomPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CustomPreviewFolder\SelectImageFromArray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomPreviewFolder\SelectImageFromArray.Designer.cs">
+      <DependentUpon>SelectImageFromArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\customTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\DataGridViewProgressCell.cs" />
+    <Compile Include="CustomControls\DataGridViewProgressColumn.cs" />
+    <Compile Include="CustomControls\DataGridViewRichTextBox.cs" />
+    <Compile Include="CustomControls\DataGridViewRichTextBoxColumn.cs" />
+    <Compile Include="CustomControls\FileNode.cs" />
+    <Compile Include="CustomControls\FilesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\FilesControl.Designer.cs">
+      <DependentUpon>FilesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\NoDoubleClickTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\OrderMenuTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\OrdersDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\DataGridViewPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\DataGridViewPanel.Designer.cs">
+      <DependentUpon>DataGridViewPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\RichTextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\RichtextboxExFolder\Texter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\RichtextboxExFolder\Texter.Designer.cs">
+      <DependentUpon>Texter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\RichTextBoxPrinter.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBaseEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBaseEdit.Designer.cs">
+      <DependentUpon>FormBaseEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormContextOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormContextOrderList.Designer.cs">
+      <DependentUpon>FormContextOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFileInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFileInfo.Designer.cs">
+      <DependentUpon>FormFileInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFileRename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFileRename.Designer.cs">
+      <DependentUpon>FormFileRename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMessenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMessenger.Designer.cs">
+      <DependentUpon>FormMessenger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSendToServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSendToServer.Designer.cs">
+      <DependentUpon>FormSendToServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUpDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUpDownload.Designer.cs">
+      <DependentUpon>FormUpDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderEditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderEditInfo.Designer.cs">
+      <DependentUpon>OrderEditInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\FormGoogleStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\FormGoogleStock.Designer.cs">
+      <DependentUpon>FormGoogleStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\FormOldStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\FormOldStock.Designer.cs">
+      <DependentUpon>FormOldStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\FormOrdersToSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\FormOrdersToSend.Designer.cs">
+      <DependentUpon>FormOrdersToSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\FormStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\FormStock.Designer.cs">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\FormStockEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\FormStockEdit.Designer.cs">
+      <DependentUpon>FormStockEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ftp\FTPClient.cs" />
+    <Compile Include="Ftp\FtpPreviewRecieve.cs" />
+    <Compile Include="Ftp\FtpReciever.cs" />
+    <Compile Include="Ghostscript.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtoClasses\ProtoDownloadOrdersFiles.cs" />
+    <Compile Include="ProtoClasses\ProtoFtpSchedule.cs" />
+    <Compile Include="ProtoClasses\ProtoEquip.cs" />
+    <Compile Include="ProtoClasses\ProtoEquipment.cs" />
+    <Compile Include="ProtoClasses\ProtoCounters.cs" />
+    <Compile Include="ProtoClasses\ProtoFiles.cs" />
+    <Compile Include="ProtoClasses\ProtoMaterial.cs" />
+    <Compile Include="ProtoClasses\ProtoOrderHistory.cs" />
+    <Compile Include="ProtoClasses\ProtoOrders.cs" />
+    <Compile Include="ProtoClasses\ProtoOrdersChangeState.cs" />
+    <Compile Include="ProtoClasses\ProtoPreview.cs" />
+    <Compile Include="ProtoClasses\ProtoSettings.cs" />
+    <Compile Include="ProtoClasses\ProtoUsers.cs" />
+    <Compile Include="ProtoClasses\ProtoViewProperties.cs" />
+    <Compile Include="SocketClient\ClientRecieveHandler.cs" />
+    <Compile Include="SocketClient\Enums.cs" />
+    <Compile Include="SocketClient\FileClient.cs" />
+    <Compile Include="SocketClient\TableClient.cs" />
+    <Compile Include="SocketClient\TableMassUpdater.cs" />
+    <Compile Include="SqlLite\Equip.cs" />
+    <Compile Include="SqlLite\FtpSchedule.cs" />
+    <Compile Include="SqlLite\Materials.cs" />
+    <Compile Include="SqlLite\Order.cs" />
+    <Compile Include="SqlLite\OrderHistory.cs" />
+    <Compile Include="SqlLite\SendChangeToSocket.cs" />
+    <Compile Include="SqlLite\SqlCounters.cs" />
+    <Compile Include="SqlLite\SqlEvent.cs" />
+    <Compile Include="SqlLite\UsersAndCustomers.cs" />
+    <Compile Include="Utils\CheckDBNull.cs" />
+    <Compile Include="Utils\Converting.cs" />
+    <Compile Include="Utils\CorelDrawExporter.cs" />
+    <Compile Include="Utils\Crypto.cs" />
+    <Compile Include="Utils\DataRowToProto.cs" />
+    <Compile Include="Utils\FileNamesValidation.cs" />
+    <Compile Include="Utils\FileUtils.cs" />
+    <Compile Include="Utils\HWSerials.cs" />
+    <Compile Include="Utils\Images.cs" />
+    <Compile Include="Utils\OrderRasterize.cs" />
+    <Compile Include="Utils\ReportForUpdater.cs" />
+    <Compile Include="Utils\Settings.cs" />
+    <Compile Include="Utils\TiffImage.cs" />
+    <Compile Include="Utils\UniqueId.cs" />
+    <Compile Include="Utils\UnixDate.cs" />
+    <Compile Include="Utils\VersionInfo.cs" />
+    <Compile Include="Utils\WindowsColorSystem.cs" />
+    <Compile Include="Utils\WorkStatusIcon.cs" />
+    <EmbeddedResource Include="CustomControls\CustomFilesControl.resx">
+      <DependentUpon>CustomFilesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\CustomPreviewFolder\CustomPreview.resx">
+      <DependentUpon>CustomPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\CustomPreviewFolder\SelectImageFromArray.resx">
+      <DependentUpon>SelectImageFromArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\FilesControl.resx">
+      <DependentUpon>FilesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\RichtextboxExFolder\Texter.resx">
+      <DependentUpon>Texter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBaseEdit.resx">
+      <DependentUpon>FormBaseEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormContextOrderList.resx">
+      <DependentUpon>FormContextOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFileInfo.resx">
+      <DependentUpon>FormFileInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFileRename.resx">
+      <DependentUpon>FormFileRename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMessenger.resx">
+      <DependentUpon>FormMessenger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSendToServer.resx">
+      <DependentUpon>FormSendToServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUpDownload.resx">
+      <DependentUpon>FormUpDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderEditInfo.resx">
+      <DependentUpon>OrderEditInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\FormGoogleStock.resx">
+      <DependentUpon>FormGoogleStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\FormOldStock.resx">
+      <DependentUpon>FormOldStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\FormOrdersToSend.resx">
+      <DependentUpon>FormOrdersToSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\FormStock.resx">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\FormStockEdit.resx">
+      <DependentUpon>FormStockEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\sylfaen.ttf" />
+    <None Include="setup.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sylfaen.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_in.png" />
+    <None Include="Resources\picture_add.png" />
+    <None Include="Resources\picture_save.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\New_256x256.png" />
+    <None Include="Resources\pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_drive_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_folder_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_folder_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_layout_await.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_layout_deny.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_layout_offline.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_layout_online.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_layout_sidebar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_print.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_server_connect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_server_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_server_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_sitemap_color.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_table_gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_user_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_user_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_vcard_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_vcard_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_world_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_black.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_wrench.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iLoading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_layout_online2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_layout_online3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CorelDRAW">
+      <Guid>{FBF4300F-D921-11D1-B806-00A0C90646A9}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="PHOTOPAINT">
+      <Guid>{3A71EB80-ADBD-11D3-B6AB-0090279126AD}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VGCore">
+      <Guid>{95E23C91-BC5A-49F3-8CD1-1FC515597048}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plotter_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printing-Cnc-Machine-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lorry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layout_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taskend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taskplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taskstop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taskwait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taskwarning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Okicon8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Okicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\headback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gsdll32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="regtlibv12.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\trash-aqua-full-icon.png" />
+    <None Include="Resources\trash-aqua-empty-icon.png" />
+    <None Include="Resources\trash-altl.png" />
+    <None Include="Resources\table_multiple.png" />
+    <None Include="Resources\table.png" />
+    <None Include="Resources\trash_alt_full.png" />
+    <None Include="Resources\trash-alt-full.png" />
+    <None Include="Resources\_lock.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\table_error.png" />
+    <None Include="Resources\wrench_orange.png" />
+    <None Include="Resources\hourglass1.png" />
+    <None Include="Resources\table_edit.png" />
+    <None Include="Resources\buttonask.png" />
+    <None Include="Resources\cnc_big.png" />
+    <None Include="Resources\cutter_big2.png" />
+    <None Include="Resources\printer_epson_big2.png" />
+    <None Include="Resources\printer_epson_big.png" />
+    <None Include="Resources\p8000.png" />
+    <None Include="Resources\script_back.png" />
+    <None Include="Resources\script_go.png" />
+    <None Include="Resources\folder_download.png" />
+    <None Include="Resources\image_download.png" />
+    <None Include="Resources\table_download.png" />
+    <None Include="Resources\picture_download.png" />
+    <None Include="Resources\page_white_vector_add.png" />
+    <None Include="Resources\drive_disk.png" />
+    <None Include="Resources\table_add.png" />
+    <None Include="Resources\page_add.png" />
+    <None Include="Resources\image_link.png" />
+    <None Include="Resources\image_edit.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\image_add.png" />
+    <None Include="Resources\picture_go.png" />
+    <None Include="Resources\picture.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\Upload_16x16.png" />
+    <None Include="Resources\page_print.png" />
+    <None Include="Resources\page_word_save.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\glasscalc_91001.png" />
+    <None Include="Resources\blank_accent.png" />
+    <None Include="Resources\application_side_expand.png" />
+    <None Include="Resources\N009.ico" />
+    <None Include="Resources\N009.png" />
+    <None Include="Resources\googleimg.png" />
+    <None Include="Resources\iconfinder_calculator_17218.png" />
+    <None Include="Resources\iconfinder_calculator-24_46589.png" />
+    <None Include="Resources\iconfinder_folder_green_1530.png" />
+    <None Include="Resources\iconfinder_Pantone_131712.png" />
+    <None Include="Resources\My-Documents-icon.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\F045_16x16.png" />
+    <None Include="Resources\server_go.png" />
+    <None Include="Resources\server_delete.png" />
+    <None Include="Resources\drive_delete.png" />
+    <None Include="Resources\drive_go.png" />
+    <None Include="Resources\server_connect.png" />
+    <None Include="Resources\Globe_16x16.png" />
+    <None Include="Resources\Information_16x16.png" />
+    <None Include="Resources\icon_Text_Document.ico" />
+    <None Include="Resources\icon_page_white_edit.ico" />
+    <None Include="Resources\page_white_edit.ico" />
+    <None Include="Resources\page_white.png" />
+    <None Include="Resources\Text_Document_24x24.png" />
+    <None Include="Resources\Text_Document_16x16.png" />
+    <None Include="Resources\Log_Out_24x24.png" />
+    <None Include="Resources\Hard_Disk_24x24.png" />
+    <None Include="Resources\Help_16x16.png" />
+    <None Include="Resources\Archive_16x16.png" />
+    <None Include="Resources\Download_16x16.png" />
+    <None Include="Resources\Forward_16x16.png" />
+    <None Include="Resources\Settings_16x16.png" />
+    <None Include="Resources\Synchronize_16x16.png" />
+    <None Include="Resources\printer1.png" />
+    <None Include="Resources\page_white_acrobat_put.png" />
+    <None Include="Resources\page_white_delete.png" />
+    <None Include="Resources\page_white_copy.png" />
+    <None Include="Resources\page_white_acrobat.png" />
+    <None Include="Resources\page_white_put.png" />
+    <None Include="Resources\page_white_add.png" />
+    <None Include="Resources\page_white_edit.png" />
+    <None Include="Resources\Information_24x24.png" />
+    <None Include="Resources\Hard Disk_24x24.png" />
+    <None Include="Resources\Settings_24x241.png" />
+    <None Include="Resources\Send_24x24.png" />
+    <None Include="Resources\Text Document_24x24.png" />
+    <None Include="Resources\Log Out_24x24.png" />
+    <None Include="Resources\Archive_24x24.png" />
+    <None Include="Resources\Globe_24x24.png" />
+    <None Include="Resources\Synchronize_24x24.png" />
+    <None Include="Resources\Synchronize_32x32.png" />
+    <None Include="Resources\Settings_24x24.png" />
+    <None Include="Resources\Stop_24x24.png" />
+    <None Include="Resources\Play_24x24.png" />
+    <None Include="Resources\Upload_32x32.png" />
+    <None Include="Resources\Download_32x32.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\application_side_boxes.png" />
+    <None Include="Resources\table_row_delete.png" />
+    <None Include="Resources\resultset_down2.png" />
+    <None Include="Resources\resultset_down1.png" />
+    <None Include="Resources\resultset_up1.png" />
+    <None Include="Resources\resultset_down.png" />
+    <None Include="Resources\resultset_up.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.75.1.14\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.75.1.14\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.75.1.14\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.75.1.14\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.75.1.142\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.75.1.142\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.75.1.142\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.75.1.142\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.75.1.142\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.75.1.142\build\CefSharp.WinForms.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.75.1.142\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.75.1.142\build\CefSharp.WinForms.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.75.1.142\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.75.1.142\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.WinForms.75.1.142\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.75.1.142\build\CefSharp.WinForms.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

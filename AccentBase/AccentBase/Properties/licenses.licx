@@ -1,0 +1,3 @@
+TXTextControl.ServerTextControl, TXTextControl.Server, Version=24.0.900.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638
+TXTextControl.TextControl, TXTextControl.Windows.Forms, Version=24.0.900.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638
+TXTextControl.Windows.Forms.Ribbon.Ribbon, TXTextControl.Windows.Forms, Version=24.0.900.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638
